@@ -30,5 +30,5 @@ def predictRoute():
     result = client.classifier.prediction()
     return jsonify(result)
 
-if __name__=='__main__':
-    app.run(debug=True)
+# if __name__=='__main__':
+#     app.run(debug=True)
