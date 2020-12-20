@@ -83,8 +83,8 @@
                     <center>Prediction Results</center>
                 </h5>
                 <div class="row">
-                    <div class="res-part2 col-md-5 col-xs-12"></div>
-                    <div class="res-part col-md-5 col-xs-12">
+                    <div class="res-part2 col-md-5 col-xl-12"></div>
+                    <div class="res-part col-md-5 col-xl-12">
                         <div class="jsonRes"></div>
                     </div>
                 </div>
@@ -133,7 +133,9 @@
                                 if (imageData.length > 10) { $(".res-part2").append("<img class='resp-img' src='data:image/jpeg;base64," + imageData + "' alt='' />"); }
                             }
                         } catch (e) { }
-                        $(".res-part").html("<pre>" + JSON.stringify(res[0], undefined, 2) + "</pre>");
+                        // $(".res-part").html("<pre>" + JSON.stringify(res[0], undefined, 2) + "</pre>");
+                        $(".res-part").html("<h1> The Picture is of a " + res[0]['image'] + "</h1>")
+                        // $(".res-part").css('font-size','1.5rem')
                         console.log(res[0])
                         $("#loading").hide();
                     }
